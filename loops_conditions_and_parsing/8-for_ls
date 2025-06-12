@@ -3,7 +3,7 @@
 
 for file in *;
 do 
-  if [[ "$r" == *-* ]];then
+  if [[ "$file" == *-* ]];then
     echo "${file#*-}"
   else 
     echo "$file" 
