@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This code prints content of each current directory
+
+for file in *;
+do 
+  if [[ "$r" == *-* ]];then
+    echo "${file#*-}"
+  else 
+    echo "$file" 
+  fi
+done
