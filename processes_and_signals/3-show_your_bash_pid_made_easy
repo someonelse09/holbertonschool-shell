@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that displays PID amd process name of processes that contains "bash"
+
+pgrep -f bash | while read -r pid; do
+   if [ -r "/proc/$pid/comm" ]; then
+     process_name=$(cat "/proc/$pid/comm")
+     echo "$pid $process_name"
+  fi
+done
